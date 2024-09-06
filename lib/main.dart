@@ -8,7 +8,11 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomeActivity());
+    return  MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.green),
+        darkTheme: ThemeData(primarySwatch: Colors.indigo),
+        debugShowCheckedModeBanner: false,
+        home: HomeActivity());
   }
 
 }
@@ -20,7 +24,7 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("My App"),),
+      appBar: AppBar(title: Text("Nur"),),
       body: Text("Flutter journey"),
     );
   }
