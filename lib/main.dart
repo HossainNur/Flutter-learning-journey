@@ -29,6 +29,12 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        elevation: 10,
+          child: Icon(Icons.add),
+          onPressed: (){
+          MySnackBar("Floating Action Button", context);
+          }),
       appBar: AppBar(
         title: Text("Nur"),
         titleSpacing: 0,
