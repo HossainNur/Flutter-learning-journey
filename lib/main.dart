@@ -29,12 +29,26 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        elevation: 10,
-          child: Icon(Icons.add),
-          onPressed: (){
-          MySnackBar("Floating Action Button", context);
-          }),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.contact_emergency),label: "Contact"),
+          BottomNavigationBarItem(icon: Icon(Icons.email),label: "Email"),
+        ],
+        onTap: (int index){
+          if(index== 0){
+            MySnackBar("home", context);
+          }
+          if(index== 1){
+            MySnackBar("contact", context);
+          }
+          if(index== 2){
+            MySnackBar("email", context);
+          }
+        },
+      ),
+      floatingActionButton: FloatingActionButton(elevation: 10, child: Icon(Icons.add), onPressed: (){MySnackBar("Floating Action Button", context);}),
       appBar: AppBar(
         title: Text("Nur"),
         titleSpacing: 0,
