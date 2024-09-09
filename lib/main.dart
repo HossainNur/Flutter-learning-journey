@@ -87,6 +87,18 @@ class HomeActivity extends StatelessWidget{
           ],
         ),
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircularProgressIndicator(),
+            SizedBox(
+              height: 15,
+            ),
+            LinearProgressIndicator(),
+          ],
+        ),
+      ),
     );
   }
 
