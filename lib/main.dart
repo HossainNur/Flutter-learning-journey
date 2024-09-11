@@ -91,6 +91,7 @@ class HomeActivity extends StatelessWidget{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.network('https://picsum.photos/250?image=9'),
             CircularProgressIndicator(),
             SizedBox(
               height: 15,
